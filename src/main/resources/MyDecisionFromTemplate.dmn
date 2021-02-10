@@ -1,11 +1,52 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_89D7DDE2-18AB-4625-926B-F710EA94D7AB" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_9DEB8417-8436-4DE7-9D60-CEDA2320C762" name="MyDecisionFromTemplate" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_89D7DDE2-18AB-4625-926B-F710EA94D7AB">
-  <dmn:extensionElements/>
-  <dmndi:DMNDI>
-    <dmndi:DMNDiagram>
-      <di:extension>
-        <kie:ComponentsWidthsExtension/>
-      </di:extension>
-    </dmndi:DMNDiagram>
-  </dmndi:DMNDI>
-</dmn:definitions>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_VRQPAU3YEDmYVp3_wV3Amg" exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:process id="new-file" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="new-file" isExecutable="true" processType="Public">
+    <bpmn2:sequenceFlow id="_F607C5F2-6302-4C07-90FE-F09420B9CDCC" sourceRef="_F6268A74-7339-4890-9814-6F49DEE51080" targetRef="_94F89C7C-E6B1-487F-B94D-FBDAE62E049E">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:endEvent id="_94F89C7C-E6B1-487F-B94D-FBDAE62E049E">
+      <bpmn2:incoming>_F607C5F2-6302-4C07-90FE-F09420B9CDCC</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_F6268A74-7339-4890-9814-6F49DEE51080">
+      <bpmn2:outgoing>_F607C5F2-6302-4C07-90FE-F09420B9CDCC</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="new-file">
+      <bpmndi:BPMNShape id="shape__F6268A74-7339-4890-9814-6F49DEE51080" bpmnElement="_F6268A74-7339-4890-9814-6F49DEE51080">
+        <dc:Bounds height="56" width="56" x="219" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__94F89C7C-E6B1-487F-B94D-FBDAE62E049E" bpmnElement="_94F89C7C-E6B1-487F-B94D-FBDAE62E049E">
+        <dc:Bounds height="56" width="56" x="355" y="91"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__F6268A74-7339-4890-9814-6F49DEE51080_to_shape__94F89C7C-E6B1-487F-B94D-FBDAE62E049E" bpmnElement="_F607C5F2-6302-4C07-90FE-F09420B9CDCC">
+        <di:waypoint x="275" y="119"/>
+        <di:waypoint x="355" y="119"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_F6268A74-7339-4890-9814-6F49DEE51080">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_VRQPAU3YEDmYVp3_wV3Amg</bpmn2:source>
+    <bpmn2:target>_VRQPAU3YEDmYVp3_wV3Amg</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
